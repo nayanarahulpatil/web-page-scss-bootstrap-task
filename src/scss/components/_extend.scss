@@ -1,0 +1,56 @@
+%ul{
+
+    list-style-type: none;
+}
+%li{
+    float: left;
+    padding: 0 7px 0px 7px;
+    font-family: $font-family;
+}
+%watermark {
+    font-size: 15rem;
+    font-weight: 700;
+    color:$heading-text-color;
+    opacity: 0.1;
+    font-family: $font-family;
+
+}
+%watermarkbottomcontent {
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin-top: -6.3rem;
+    color: $heading-text-color;
+    text-transform: uppercase;
+    font-family: $font-family;
+}
+%knowmorebtn{
+   padding:0.3rem 2rem;
+    background:#f2e162;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color:$textcolor;
+    font-family: $font-family;
+    transition:  all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out; 
+      -o-transition: all .5s ease-in-out; 
+      -ms-transition:all .5s ease-in-out;
+}
+%knowmorebtnhover{
+    padding:0.3rem 2rem;
+     background:#272727;
+     text-transform: uppercase;
+     font-size: 1.6rem;
+     color:#FFFFFF;
+     font-family: $font-family;
+     transition:  all .5s ease-in-out;
+     -webkit-transition: all .5s ease-in-out;
+       -moz-transition: all .5s ease-in-out; 
+       -o-transition: all .5s ease-in-out; 
+       -ms-transition:all .5s ease-in-out;
+ }
+%sliderwrapcontent{
+    background:#291818;
+    opacity: .6;
+    z-index: 5;
+}

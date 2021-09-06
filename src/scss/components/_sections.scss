@@ -1,0 +1,156 @@
+/*ABOUT US SECTION START*/
+.about_us_sec{
+  margin: 8.6rem 0rem;
+  .about-us-sec_content{
+    width: 88.6rem;
+  }
+  p{
+    font-size:$font-16px;
+    font-family: $font-family;
+    color: $textcolor;
+    font-weight: 400;
+  }
+}
+.watermark-h2{
+    @extend %watermark
+}
+.watermark-bottom-content{
+  @extend %watermarkbottomcontent
+}
+.knowmore_btn{
+  @extend %knowmorebtn;  
+  @include borderradius(12px);
+  @include border(1px,transparent);
+  transition:  all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out; 
+    -o-transition: all .5s ease-in-out; 
+    -ms-transition:all .5s ease-in-out;
+    &:hover{
+      @extend %knowmorebtnhover;
+      @include borderradius(12px);
+      @include border(1px,transparent);
+       transition:  all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out; 
+    -o-transition: all .5s ease-in-out; 
+    -ms-transition:all .5s ease-in-out;
+}
+
+}
+
+/*NEWS SECTION START*/
+
+.sliderwrap{
+  
+  .noactive{
+    width: 45rem;
+  }
+}
+    .slick-slide img {
+      width: 100%;
+    }
+
+.news-text-rotate {
+  @include transform(rotate(-90deg)); 
+}
+.latestnews-sec-text{
+  height: 60rem;
+}
+
+.sliderwrap-date-right{
+  width: 10rem;
+  height: 5.6rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  z-index: 999;
+  h4{
+    font-size:4.1rem;
+    font-family: $font-family;
+    color:$text-color;
+    font-weight: 400;
+  }
+  h5{
+    font-size:$font-14px;
+    font-family: $font-family;
+    color:$text-color;
+    font-weight: 400;
+  }
+}
+.sliderwrap-content{
+  @extend %sliderwrapcontent;
+padding:1rem;
+position: absolute;
+bottom: 0;
+h6{
+  font-size:$font-22px;
+  font-family: $font-family;
+  color:#FFFFFF;
+  font-weight: 600; 
+
+}p{
+  font-size:$font-16px;
+  font-family: $font-family;
+  color:#FFFFFF;
+  font-weight: 400; 
+
+}
+
+}
+
+  .sliderwrap-button-leftbtn {
+    background: #f2e162;
+    width: 4.1rem;
+    height: 4rem;
+    border-radius: 10px;
+    font-size: 2.1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 20px;
+    z-index: 9;
+    border: none;
+    font-weight: 600;
+    color: $textcolor;
+  }
+
+.slick-active {
+    width: 49rem;
+    .sliderwrap-content{
+      padding-bottom: 5rem;
+     }
+}
+/*Services SECTION START*/
+.service-sec_content{
+  width: 87.7rem;
+  ul{
+    @extend %ul;
+}
+}
+
+/*TENDER SECTION START*/
+section.tender-grp-img {
+  background: url(../assets/tender.png);
+  background-size: cover;
+  height: 10rem;
+  margin-top: 7.5rem;
+  margin-bottom: 4.3rem;
+}
+.tender-content{
+  padding-left: 2.7rem;
+  padding-top: 2.7rem;
+  h4{
+    font-size:$font-18px;
+    font-family: $font-family;
+    color:$text-color;
+    font-weight: 600;
+  }
+  p{
+    font-size:$font-16px;
+    font-family: $font-family;
+    color:$text-color;
+    font-weight: 400;
+  }
+}
+.view-all-btn-holder{
+  margin-top: 6.6rem;
+}
