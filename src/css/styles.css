@@ -436,6 +436,10 @@ section.tender-grp-img {
   margin-top: 6.6rem;
 }
 
+.tender-detail_card {
+  box-shadow: -2px 3px 4px 0px #eee;
+}
+
 /*Responsive for mobile and tab*/
 @media (max-width: 1199px) {
   html {
