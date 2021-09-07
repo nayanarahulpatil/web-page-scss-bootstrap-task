@@ -154,3 +154,95 @@ section.tender-grp-img {
 .view-all-btn-holder{
   margin-top: 6.6rem;
 }
+/*Responsive for mobile and tab*/
+
+@include respond-to('desktop-max') {
+  html{
+    font-size:9px;
+  }
+  .container1{
+    max-width:140rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+}
+
+@include respond-to('ipad-max') {
+ 
+  html{
+     font-size:6px;
+   }
+   .container1{
+     max-width:100%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 0;
+     padding-right: 0;
+ 
+ }
+ .news-text-rotate {
+  @include transform(rotate(0deg)); 
+}
+.latestnews-sec-text{
+  height: 30rem;
+}
+.tender-detail_card{
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.tender-content{
+align-items: center;
+display: flex;
+flex-direction: column;
+min-height: 15rem;
+p{
+  align-items: center;
+}
+}
+}
+
+@include respond-to('mobile-max'){
+  html{
+      font-size:4px;
+    }
+  
+    .container1{
+      max-width:100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .about_us_sec{
+    margin: 1.6rem 0rem;
+  }
+
+  .service-sec_content{
+    padding-top: 2rem;
+   
+    ul{
+
+      flex-direction: column;
+    }
+    li{
+      margin: 2rem 0rem;
+    }
+  }
+  .tender-content{
+ max-width: 80%;
+ }
+ .latestnews-sec-text{
+   height: 16rem;
+ }
+ .watermark-h2{
+  font-size: 11rem;
+  font-weight: 700;
+  color:$heading-text-color;
+  opacity: 0.1;
+  font-family: $font-family;
+
+}
+}

@@ -1,11 +1,15 @@
 /*Header SECTION START*/
+header{
+  height: 72.3rem;
+  position: relative;
+}
 .banner-header{
     background: url(../assets/banner.png) no-repeat ;
     background-size: cover;
-    height: 72.3rem;
+    height: 100%;
     background-position: 100% 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 100%);
-    position: relative;
+    
   }
   .logo_content{
       margin: 0rem !important;
@@ -13,6 +17,22 @@
       font-family: $font-family;
       color: $black;
       font-weight: 700;
+      letter-spacing: .3px;
+      transition:  all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out; 
+        -o-transition: all .5s ease-in-out; 
+        -ms-transition:all .5s ease-in-out;
+      &:hover{
+          color:#e57313;
+          text-decoration: none;
+          cursor: pointer;
+          transition:  all .5s ease-in-out;
+          -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out; 
+            -o-transition: all .5s ease-in-out; 
+            -ms-transition:all .5s ease-in-out;
+      }
   }
   .navmenu_primary,.navmenu_secondary{
     ul {
@@ -50,7 +70,7 @@
     .navmenu_secondary_list li{
         @include borderright(1px ,rgb(13, 13, 14))
     }
-    .navmenu_secondary_list li:nth-last-child(2){
+    .navmenu_secondary_list li:nth-last-child(1){
         border: none;
     }
     .brright{
@@ -65,15 +85,23 @@
       }
       &_span{
           padding-left: 1rem;
+          border: none;
+          background-color: transparent;
       }
       &_span:nth-child(1) {
           padding-left: 0px;
+          border: none;
+          background-color: transparent;
       }
       &_span:nth-child(2) {
           font-size: 1.4rem;
+          border: none;
+          background-color: transparent;
       }
       &_span:nth-child(3) {
           font-size: 1.6rem;
+          border: none;
+          background-color: transparent;
       }
      
     }
@@ -102,7 +130,7 @@ background: url(../assets/Path\ 1.png) no-repeat right;
 
   .center_bg_banner{
     position: absolute;
-    bottom: 7%;
+    bottom: 3%;
     text-align: center;
     width:100%;
     z-index: 4;
@@ -116,11 +144,13 @@ background: url(../assets/Path\ 1.png) no-repeat right;
     }
 
   }
+
+  /*Responsive for mobile and tab*/
   @include respond-to('desktop-max') {
     html{
-      font-size:7px;
+      font-size:9px;
     }
-    .container{
+    .container1{
       max-width:140rem;
       margin-left: auto;
       margin-right: auto;
@@ -135,12 +165,11 @@ background: url(../assets/Path\ 1.png) no-repeat right;
        font-size:6px;
      }
      .container1{
-       max-width:130rem;
+       max-width:100%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 0;
        padding-right: 0;
-       background-color: aquamarine !important;
    
    }
   }
