@@ -40,12 +40,18 @@
 }
 
 /*NEWS SECTION START*/
-
 .sliderwrap{
-  
+
   .noactive{
     width: 45rem;
+    overflow: hidden !important;
   }
+}
+
+.sliderwrap_inner{
+.card{
+  overflow: hidden !important;
+}
 }
     .slick-slide img {
       width: 100%;
@@ -134,6 +140,7 @@ section.tender-grp-img {
   height: 10rem;
   margin-top: 7.5rem;
   margin-bottom: 4.3rem;
+
 }
 .tender-content{
   padding-left: 2.7rem;

@@ -326,6 +326,11 @@ header {
 /*NEWS SECTION START*/
 .sliderwrap .noactive {
   width: 45rem;
+  overflow: hidden !important;
+}
+
+.sliderwrap_inner .card {
+  overflow: hidden !important;
 }
 
 .slick-slide img {
