@@ -136,12 +136,18 @@ header {
   -ms-transition: all 0.5s ease-in-out;
 }
 
+.collaping_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end !important;
+}
+
 .navmenu_primary ul, .navmenu_secondary ul {
   float: right;
   margin-bottom: 0;
 }
-.navmenu_primary a, .navmenu_secondary a {
-  color: #505050;
+.navmenu_primary .nav-link, .navmenu_primary a, .navmenu_secondary .nav-link, .navmenu_secondary a {
+  color: #505050 !important;
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -152,7 +158,7 @@ header {
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
 }
-.navmenu_primary a:hover, .navmenu_secondary a:hover {
+.navmenu_primary .nav-link:hover, .navmenu_primary a:hover, .navmenu_secondary .nav-link:hover, .navmenu_secondary a:hover {
   color: #e57313;
   text-decoration: none;
   cursor: pointer;
@@ -161,12 +167,6 @@ header {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
-}
-.navmenu_primary .navmenu_secondary_list li, .navmenu_secondary .navmenu_secondary_list li {
-  border-right: 1px solid #0d0d0e;
-}
-.navmenu_primary .navmenu_secondary_list li:nth-last-child(1), .navmenu_secondary .navmenu_secondary_list li:nth-last-child(1) {
-  border: none;
 }
 .navmenu_primary .brright, .navmenu_secondary .brright {
   border-right: 1px solid #265781;
@@ -196,6 +196,17 @@ header {
   font-size: 1.6rem;
   border: none;
   background-color: transparent;
+}
+
+.navmenu_secondary_list {
+  display: flex;
+}
+.navmenu_secondary_list li {
+  border-right: 1px solid #0d0d0e;
+}
+
+.navmenu_secondary_list li:nth-last-child(1) {
+  border: none;
 }
 
 .nav_span_EN {
@@ -271,6 +282,33 @@ header {
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .navmenu_primary .nav-link, .navmenu_primary a, .navmenu_secondary .nav-link, .navmenu_secondary a {
+    color: white !important;
+    margin-bottom: 2rem;
+  }
+  .navmenu_primary .nav-link:hover, .navmenu_primary a:hover, .navmenu_secondary .nav-link:hover, .navmenu_secondary a:hover {
+    color: #e57313 !important;
+  }
+  .navmenu_primary .brright, .navmenu_secondary .brright {
+    display: none;
+  }
+  .navmenu_primary .search, .navmenu_secondary .search {
+    display: none;
+  }
+
+  .navmenu_secondary_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .navmenu_secondary_list li {
+    border: none;
+  }
+
+  .collaping_nav {
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 @media (max-width: 467px) {
@@ -446,7 +484,7 @@ section.tender-grp-img {
 }
 
 .tender-detail_card {
-  box-shadow: -2px 3px 4px 0px #eee;
+  box-shadow: -2px 3px 6px 2px #eee;
 }
 
 /*Responsive for mobile and tab*/
@@ -490,13 +528,17 @@ section.tender-grp-img {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .tender-content {
+    max-width: 90%;
     align-items: center;
     display: flex;
     flex-direction: column;
-    min-height: 15rem;
+    min-height: 16rem;
+    padding-left: 0rem;
+    padding-top: 3.7rem;
   }
   .tender-content p {
     align-items: center;
@@ -531,6 +573,10 @@ section.tender-grp-img {
 
   .tender-content {
     max-width: 80%;
+  }
+
+  .tender-detail_card {
+    padding-bottom: 3rem;
   }
 
   .latestnews-sec-text {
