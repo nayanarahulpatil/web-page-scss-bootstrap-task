@@ -456,6 +456,11 @@ header {
 .service-sec_content {
   width: 87.7rem;
 }
+.service-sec_content ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
 .service-sec_content ul p {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -580,9 +585,18 @@ section.tender-grp-img {
   }
   .service-sec_content ul {
     flex-direction: column;
+    align-items: center;
   }
   .service-sec_content li {
     margin: 2rem 0rem;
+  }
+
+  .slick-active .card {
+    width: 43rem;
+    overflow: hidden !important;
+  }
+  .slick-active .sliderwrap-content {
+    padding-bottom: 1rem;
   }
 
   .tender-content {
