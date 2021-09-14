@@ -45,30 +45,70 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 .card{
+  margin-top: 5rem;
   width: 41rem;
   overflow: hidden !important;
-}}
+
+  .sliderwrap-content{
+    @extend %sliderwrapcontent;
+    width: 100%;
+  padding:1rem;
+  position: absolute;
+  bottom: 0;
+  h6{
+    font-size:$font-18px;
+    font-family: $font-family;
+    color:#FFFFFF;
+    font-weight: 600; 
+    line-height: 2.7rem;
+    z-index: 999;
+  }p{
+display: none;
+
+  }
+  }
+}
+}
 .slick-active {
   .card{
     width: 49rem;
+    margin-top: 0rem;
+    border: none;
     overflow: hidden !important;
+    .sliderwrap-content{
+      padding-bottom: 7rem;
+      h6{
+        font-size:$font-22px;
+        font-family: $font-family;
+        line-height: 2.7rem;
+        color:#FFFFFF;
+        font-weight: 600; 
+        z-index: 999;
+      }p{
+        display: block;
+        font-size:$font-16px;
+        font-family: $font-family;
+        color:#FFFFFF;
+        font-weight: 400; 
+        z-index: 999;
+        line-height: 2.5rem;
+        margin-top: 0.5rem;
+      }
+   }
   }
-  .sliderwrap-content{
-    padding-bottom: 5rem;
- }
+ 
 }
+
 .latestnews-sec{
   .row{
     margin: 0rem !important;
   }
 }
-
 .news-text-rotate {
   @include transform(rotate(-90deg)); 
 }
-
-
 .sliderwrap-date-right{
   width: 10rem;
   height: 5.6rem;
@@ -88,28 +128,6 @@
     font-weight: 400;
   }
 }
-.sliderwrap-content{
-  @extend %sliderwrapcontent;
-  width: 100%;
-padding:1rem;
-position: absolute;
-bottom: 0;
-h6{
-  font-size:$font-22px;
-  font-family: $font-family;
-  color:#FFFFFF;
-  font-weight: 600; 
-
-}p{
-  font-size:$font-16px;
-  font-family: $font-family;
-  color:#FFFFFF;
-  font-weight: 400; 
-
-}
-
-}
-
   .sliderwrap-button-leftbtn {
     background: #f2e162;
     cursor: pointer;
@@ -118,8 +136,8 @@ h6{
     border-radius: 10px;
     font-size: 2.1rem;
     position: absolute;
-    bottom: 1rem;
-    left: 20px;
+    bottom: 2rem;
+    left: 30px;
     z-index: 9;
     border: none;
     font-weight: 600;
@@ -128,6 +146,9 @@ h6{
 
 
 /*Services SECTION START*/
+.service-sec {
+  margin-top: 8rem;
+}
 .service-sec_content{
   width: 87.7rem;
   ul{
@@ -215,22 +236,41 @@ section.tender-grp-img {
   height: 30rem;
 }
 .tender-detail_card{
+  
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  padding: 3rem;
 }
 .tender-content{
-  max-width: 90%;
+  max-width: 55%;
 align-items: center;
 display: flex;
 flex-direction: column;
-min-height: 16rem;
+min-height: 13rem;
 padding-left: 0rem;
-padding-top: 3.7rem;
+padding-top: 0rem;
+
 p{
   align-items: center;
 }
+}
+.watermark-h2{
+  font-size: 11rem;
+  font-weight: 700;
+  color:$heading-text-color;
+  opacity: 0.1;
+  font-family: $font-family;
+
+}
+.watermark-bottom-content{
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin-top: -5.3rem;
+  color: $heading-text-color;
+  text-transform: uppercase;
+  font-family: $font-family;
 }
 }
 
@@ -249,7 +289,12 @@ p{
   .about_us_sec{
     margin: 1.6rem 0rem;
   }
-
+  .tender-detail_card{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
   .service-sec_content{
     padding-top: 2rem;
    
@@ -262,6 +307,7 @@ p{
       margin: 2rem 0rem;
     }
   }
+  
   .slick-active {
     .card{
       width: 43rem;
@@ -271,6 +317,12 @@ p{
       padding-bottom: 1rem;
    }
   }
+  .sliderwrap_inner{
+  .card{
+    margin-top: 0rem;
+    width: 41rem;
+    overflow: hidden !important;
+  }}
   .tender-content{
  max-width: 80%;
  }
@@ -281,11 +333,19 @@ padding-bottom: 3rem;
    height: 16rem;
  }
  .watermark-h2{
-  font-size: 11rem;
+  font-size: 9rem;
   font-weight: 700;
   color:$heading-text-color;
   opacity: 0.1;
   font-family: $font-family;
 
+}
+.slick-active {
+  .card{
+    .sliderwrap-content{
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+  }
 }
 }

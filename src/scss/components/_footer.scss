@@ -1,24 +1,26 @@
 /*FOOTER START*/
 .footer_container{
-    margin-top: 5rem;
-    background-color: $yellow;
-     }
-     .subscribe_section{
-         margin-top: 6.4rem;
-         flex-grow: 1;
+  margin-top: 5rem;
+  background-color: $yellow;
+ }
+ .footer_container_inner{
+  padding: 0rem;
+}
+.subscribe_section{
+ margin-top: 6.4rem;
+ flex-grow: 1;
 h4{
   color: $text-color;
   font-weight:600;
   font-size:$font-22px;
 }
-     }
-     
+ }
      .subscribe_section_email_holder{
         max-width: 67.2rem;
         height: 4.6rem;
         background: rgba(0, 0, 0, 0.1) none;
         @include borderradius(8rem);
-     padding: 0.5rem;
+        padding: 0.5rem;
         margin-top: 1.6rem;
         margin-right: 7.5rem;
      
@@ -85,7 +87,7 @@ h4{
       
         }
         .last_about_us_holder {
-       padding-right: 5rem;
+            padding-right: 5rem;
             border-right: 1px solid rgba(#707070, .3);
         }
         h5{
@@ -177,8 +179,9 @@ h4{
  
   .Follow_us_container{
    margin-bottom: 3.2rem;
-  padding-right: 3rem;
-  } .Follow_us_header_container{
+   padding-right: 3rem;
+  }
+   .Follow_us_header_container{
     border-right: 1px solid rgba(#FFFFFF, .3);
     width: 50%;
 
@@ -191,10 +194,10 @@ h4{
    line-height: 1.8rem;
   }
   .Follow_us_icon_container{
- color:  $text-color;
- font-size: 2.3rem;
- padding-left: 2rem;
- width: 100%;
+   color:  $text-color;
+   font-size: 2.3rem;
+   padding-left: 2rem;
+   width: 100%;
   }
 
   /*Responsive for mobile and tab*/
@@ -209,11 +212,13 @@ h4{
       padding-left: 0;
       padding-right: 0;
   }
+  .about_us_holder{
+    width: 100%;
+   }
   .footer_container_inner{
-   padding: 5rem;
+   padding: 3rem;
   }
   }
-  
   @include respond-to('ipad-max') {
    
     html{
@@ -230,8 +235,56 @@ h4{
    .about_us_holder{
     width: 100%;
    }
+   .footer_container_inner{
+    padding: 3rem;
+   }
   }
   
+  @include respond-to('portrait-mobile-max') {
+    html{
+      font-size:6px;
+    }
+    .container1{
+      max-width:100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+  
+  }
+    .footer_container_inner{
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .contact_us_section{
+      width: 100%;
+      padding: 5rem;
+    }
+ .subscribe_section{
+   align-items: center;
+   padding: 0rem 2rem;
+   .subscribe_section_email_holder {
+     margin-right: 0rem;
+     width: 90%;
+   }
+ }
+ .about_us_holder {
+   width: 100%;
+  //  .about_us_innear{
+  //    text-align: center;
+  //  }
+   .last_about_us_holder{
+    padding-right: 0rem;
+    border-right: none;
+  }
+ }
+ .text_declaration_holder {
+   width: 100%;
+ }
+
+  }
+
+
   @include respond-to('mobile-max'){
     html{
         font-size:5px;
@@ -260,10 +313,10 @@ h4{
    }
  }
  .about_us_holder {
-   width: 80%;
-   .about_us_innear{
-     text-align: center;
-   }
+   width: 100%;
+  //  .about_us_innear{
+  //    text-align: center;
+  //  }
    .last_about_us_holder{
     padding-right: 0rem;
     border-right: none;
