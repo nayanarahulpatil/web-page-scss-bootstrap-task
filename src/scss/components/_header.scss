@@ -9,9 +9,7 @@ header{
     height: 100%;
     background-position: 100% 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 100%);
-    
-  }
-  .logo_content{
+    .logo_content{
       margin: 0rem !important;
       font-size:$font-15px;
       font-family: $font-family;
@@ -34,6 +32,8 @@ header{
             -ms-transition:all .5s ease-in-out;
       }
   }
+  }
+  
   .collaping_nav{
     display: flex;
     flex-direction: column;
@@ -55,25 +55,23 @@ header{
         font-family: $font-family;
         font-weight: 400;
         letter-spacing: .3px;
+        padding-right: 0rem !important;
         transition:  all .5s ease-in-out;
         -webkit-transition: all .5s ease-in-out;
           -moz-transition: all .5s ease-in-out; 
           -o-transition: all .5s ease-in-out; 
           -ms-transition:all .5s ease-in-out;
-        &:hover{
-            color:#e57313;
-            text-decoration: none;
-            cursor: pointer;
-            transition:  all .5s ease-in-out;
-            -webkit-transition: all .5s ease-in-out;
-              -moz-transition: all .5s ease-in-out; 
-              -o-transition: all .5s ease-in-out; 
-              -ms-transition:all .5s ease-in-out;
-        }
-        
-
     }
-    
+    .nav-link:hover, a:hover{
+      color:#e57313 !important;
+      text-decoration: none;
+      cursor: pointer;
+      transition:  all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out; 
+        -o-transition: all .5s ease-in-out; 
+        -ms-transition:all .5s ease-in-out;
+  }
     .brright{
         @include borderright(1px ,#265781);
         display: flex;
@@ -85,24 +83,29 @@ header{
           padding: 0px 3px;
       }
       &_span{
-          padding-left: 1rem;
+         width: 3rem;
+         height: 3rem;
           border: none;
           background-color: transparent;
+          cursor: pointer;
       }
       &_span:nth-child(1) {
           padding-left: 0px;
           border: none;
           background-color: transparent;
+          cursor: pointer;
       }
       &_span:nth-child(2) {
           font-size: 1.4rem;
           border: none;
           background-color: transparent;
+          cursor: pointer;
       }
       &_span:nth-child(3) {
           font-size: 1.6rem;
           border: none;
           background-color: transparent;
+          cursor: pointer;
       }
      
     }

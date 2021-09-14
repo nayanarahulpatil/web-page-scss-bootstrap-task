@@ -31,6 +31,7 @@
     font-size: 1.6rem;
     color:$textcolor;
     font-family: $font-family;
+    cursor: pointer;
     transition:  all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
       -moz-transition: all .5s ease-in-out; 
@@ -42,6 +43,7 @@
      background:#272727;
      text-transform: uppercase;
      font-size: 1.6rem;
+     cursor: pointer;
      color:#FFFFFF;
      font-family: $font-family;
      transition:  all .5s ease-in-out;
@@ -54,4 +56,5 @@
     background:#291818;
     opacity: .6;
     z-index: 5;
+
 }

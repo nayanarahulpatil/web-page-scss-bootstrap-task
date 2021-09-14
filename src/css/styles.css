@@ -48,6 +48,7 @@
   font-size: 1.6rem;
   color: #272727;
   font-family: "Poppins", sans-serif;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -60,6 +61,7 @@
   background: #272727;
   text-transform: uppercase;
   font-size: 1.6rem;
+  cursor: pointer;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
   transition: all 0.5s ease-in-out;
@@ -111,8 +113,7 @@ header {
   background-position: 100% 100%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 100%);
 }
-
-.logo_content {
+.banner-header .logo_content {
   margin: 0rem !important;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
@@ -125,7 +126,7 @@ header {
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
 }
-.logo_content:hover {
+.banner-header .logo_content:hover {
   color: #e57313;
   text-decoration: none;
   cursor: pointer;
@@ -152,6 +153,7 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   letter-spacing: 0.3px;
+  padding-right: 0rem !important;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -159,7 +161,7 @@ header {
   -ms-transition: all 0.5s ease-in-out;
 }
 .navmenu_primary .nav-link:hover, .navmenu_primary a:hover, .navmenu_secondary .nav-link:hover, .navmenu_secondary a:hover {
-  color: #e57313;
+  color: #e57313 !important;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -178,24 +180,29 @@ header {
   padding: 0px 3px;
 }
 .navmenu_primary li.brright_span, .navmenu_primary .a-text_span, .navmenu_secondary li.brright_span, .navmenu_secondary .a-text_span {
-  padding-left: 1rem;
+  width: 3rem;
+  height: 3rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .navmenu_primary li.brright_span:nth-child(1), .navmenu_primary .a-text_span:nth-child(1), .navmenu_secondary li.brright_span:nth-child(1), .navmenu_secondary .a-text_span:nth-child(1) {
   padding-left: 0px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .navmenu_primary li.brright_span:nth-child(2), .navmenu_primary .a-text_span:nth-child(2), .navmenu_secondary li.brright_span:nth-child(2), .navmenu_secondary .a-text_span:nth-child(2) {
   font-size: 1.4rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .navmenu_primary li.brright_span:nth-child(3), .navmenu_primary .a-text_span:nth-child(3), .navmenu_secondary li.brright_span:nth-child(3), .navmenu_secondary .a-text_span:nth-child(3) {
   font-size: 1.6rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .navmenu_secondary_list {
@@ -362,31 +369,32 @@ header {
 }
 
 /*NEWS SECTION START*/
-.sliderwrap .noactive {
-  width: 45rem;
+.sliderwrap_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sliderwrap_inner .card {
+  width: 41rem;
   overflow: hidden !important;
+}
+
+.slick-active .card {
+  width: 49rem;
+  overflow: hidden !important;
+}
+.slick-active .sliderwrap-content {
+  padding-bottom: 5rem;
 }
 
 .latestnews-sec .row {
   margin: 0rem !important;
 }
 
-.sliderwrap_inner .card {
-  overflow: hidden !important;
-}
-
-.slick-slide img {
-  width: 100%;
-}
-
 .news-text-rotate {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
-}
-
-.latestnews-sec-text {
-  height: 60rem;
 }
 
 .sliderwrap-date-right {
@@ -410,6 +418,7 @@ header {
 }
 
 .sliderwrap-content {
+  width: 100%;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -429,6 +438,7 @@ header {
 
 .sliderwrap-button-leftbtn {
   background: #f2e162;
+  cursor: pointer;
   width: 4.1rem;
   height: 4rem;
   border-radius: 10px;
@@ -442,17 +452,19 @@ header {
   color: #272727;
 }
 
-.slick-active {
-  width: 49rem;
-}
-.slick-active .sliderwrap-content {
-  padding-bottom: 5rem;
-}
-
 /*Services SECTION START*/
 .service-sec_content {
   width: 87.7rem;
 }
+.service-sec_content ul p {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: #505050;
+  font-weight: 400;
+  margin-top: 2.3rem;
+  text-transform: uppercase;
+}
+
 /*TENDER SECTION START*/
 section.tender-grp-img {
   background: url(../assets/tender.png);
@@ -471,12 +483,14 @@ section.tender-grp-img {
   font-family: "Poppins", sans-serif;
   color: #505050;
   font-weight: 600;
+  line-height: 2.7rem;
 }
 .tender-content p {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   color: #505050;
   font-weight: 400;
+  line-height: 2.1rem;
 }
 
 .view-all-btn-holder {
@@ -671,6 +685,7 @@ section.tender-grp-img {
   width: 19.1rem;
   height: 3.6rem;
   padding: 0.2rem;
+  cursor: pointer;
   border: none;
   color: #FFFFFF;
   background-color: #f2e162;
@@ -745,10 +760,12 @@ section.tender-grp-img {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   letter-spacing: 0.3px;
+  line-height: 2.4rem;
 }
 .conacct_section_inner p {
   color: #505050;
   font-size: 1.4rem;
+  line-height: 1.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   opacity: 0.8;
@@ -808,6 +825,10 @@ section.tender-grp-img {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .footer_container_inner {
+    padding: 5rem;
+  }
 }
 @media (max-width: 991px) {
   html {
@@ -841,6 +862,7 @@ section.tender-grp-img {
 
   .footer_container_inner {
     flex-direction: column;
+    padding: 2rem;
   }
 
   .contact_us_section {

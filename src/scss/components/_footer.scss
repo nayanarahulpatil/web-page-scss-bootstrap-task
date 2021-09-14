@@ -65,6 +65,7 @@ h4{
         width: 19.1rem;
         height: 3.6rem;
         padding: 0.2rem;
+        cursor: pointer;
         border: none;
         color: #FFFFFF;
         background-color:$yellow;;
@@ -147,10 +148,12 @@ h4{
           font-family: $font-family;
           font-weight: 600;
           letter-spacing: .3px;
+          line-height: 2.4rem;
       }
       p{
         color: $text-color;
         font-size:$font-14px;
+        line-height: 1.8rem;
         font-family: $font-family;
         font-weight: 400;
         opacity: 0.8;
@@ -206,6 +209,9 @@ h4{
       padding-left: 0;
       padding-right: 0;
   }
+  .footer_container_inner{
+   padding: 5rem;
+  }
   }
   
   @include respond-to('ipad-max') {
@@ -239,6 +245,7 @@ h4{
     }
     .footer_container_inner{
       flex-direction: column;
+      padding: 2rem;
     }
     .contact_us_section{
       width: 100%;
