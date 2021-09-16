@@ -6,9 +6,11 @@
   }
   p{
     font-size:$font-16px;
-    font-family: $font-family;
+    font-family:$font-family_SFCompactDisplay-Regular;
     color: $textcolor;
     font-weight: 400;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
   }
 }
 .watermark-h2{
@@ -19,7 +21,7 @@
 }
 .knowmore_btn{
   @extend %knowmorebtn;  
-  @include borderradius(12px);
+  @include borderradius(10px);
   @include border(1px,transparent);
   transition:  all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
@@ -28,7 +30,7 @@
     -ms-transition:all .5s ease-in-out;
     &:hover{
       @extend %knowmorebtnhover;
-      @include borderradius(12px);
+      @include borderradius(10px);
       @include border(1px,transparent);
        transition:  all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
@@ -68,7 +70,32 @@
 display: none;
 
   }
+  .sliderwrap-button-wrap{
+    display: none;
   }
+  }
+  .sliderwrap-date-right{
+    width: 8.5rem;
+    height: 5.6rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    z-index: 999;
+    h4{
+      font-size:3.1rem;
+      font-family:$font-family_SFCompactDisplay-Regular;
+      color:$text-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    h5{
+      font-size:1rem;
+      font-family:$font-family_SFCompactDisplay-Regular;
+      color:$text-color;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  
 }
 }
 .slick-active {
@@ -94,9 +121,50 @@ display: none;
         font-weight: 400; 
         z-index: 999;
         line-height: 2.5rem;
-        margin-top: 0.5rem;
+        
+      }
+      .sliderwrap-button-wrap{
+        display: block;
+        .sliderwrap-button-leftbtn {
+          background: #f2e162;
+          cursor: pointer;
+          width: 4.1rem;
+          height: 4rem;
+          border-radius: 10px;
+          font-size: 2.1rem;
+          position: absolute;
+          bottom: 2rem;
+          left: 20px;
+          z-index: 9;
+          border: none;
+          font-weight: 600;
+          color: $textcolor;
+        }
+      
       }
    }
+   .sliderwrap-date-right{
+    width: 10rem;
+    height: 5.6rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    z-index: 999;
+    h4{
+      font-size:4.1rem;
+      font-family:$font-family_SFCompactDisplay-Regular;
+      color:$text-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    h5{
+      font-size:$font-14px;
+      font-family:$font-family_SFCompactDisplay-Regular;
+      color:$text-color;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  
   }
  
 }
@@ -109,40 +177,6 @@ display: none;
 .news-text-rotate {
   @include transform(rotate(-90deg)); 
 }
-.sliderwrap-date-right{
-  width: 10rem;
-  height: 5.6rem;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  z-index: 999;
-  h4{
-    font-size:4.1rem;
-    font-family: $font-family;
-    color:$text-color;
-    font-weight: 400;
-  }
-  h5{
-    font-size:$font-14px;
-    font-family: $font-family;
-    color:$text-color;
-    font-weight: 400;
-  }
-}
-  .sliderwrap-button-leftbtn {
-    background: #f2e162;
-    cursor: pointer;
-    width: 4.1rem;
-    height: 4rem;
-    border-radius: 10px;
-    font-size: 2.1rem;
-    position: absolute;
-    bottom: 2rem;
-    left: 30px;
-    z-index: 9;
-    border: none;
-    font-weight: 600;
-    color: $textcolor;
-  }
 
 
 /*Services SECTION START*/
@@ -158,23 +192,39 @@ display: none;
     justify-content: space-around;
     p{
       font-size:$font-16px;
-      font-family: $font-family;
+      font-family: $font-family_lato;
       color:$black;
-      font-weight: 400; 
+      font-weight: 600; 
     margin-top: 2.3rem;
+    line-height: 1.9rem;
     text-transform: uppercase;
     }
 }
 }
 
 /*TENDER SECTION START*/
-section.tender-grp-img {
+
+
+.tenders-sec{
+  background: rgba(255, 255, 255, 0.6)
+}
+.tender-grp-img {
   background: url(../assets/tender.png);
   background-size: cover;
   height: 10rem;
   margin-top: 7.5rem;
   margin-bottom: 4.3rem;
+  position: relative;
 
+}
+.layer {
+  background-color: rgba(45, 51, 58, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 24%, 100% 0%, 100% 100%, 0 100%);
 }
 .tender-content{
   padding-left: 2.7rem;
@@ -198,7 +248,10 @@ section.tender-grp-img {
   margin-top: 6.6rem;
 }
 .tender-detail_card{
-  box-shadow: -2px 3px 6px 2px #eee;
+  //box-shadow: -2px 3px 6px 2px #eee;
+  box-shadow: 0px 3px 6px  rgba(0,0,0,0.16);
+  -webkit-box-shadow: 0px 3px 6px  rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
 
 }
 /*Responsive for mobile and tab*/

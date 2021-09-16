@@ -23,6 +23,71 @@
          font-style: normal;
          font-display: swap;
   }
+  @font-face {
+	font-family: 'Lato';
+	src: url('Lato-Regular.eot');
+	src: url('Lato-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Lato-Regular.svg#Lato-Regular') format('svg'),
+		url('Lato-Regular.ttf') format('truetype'),
+		url('Lato-Regular.woff') format('woff'),
+		url('Lato-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+     font-display: swap;
+}
 
-  
+@font-face {
+	font-family: 'Lato';
+	src: url('Lato-Black.eot');
+	src: url('Lato-Black.eot?#iefix') format('embedded-opentype'),
+		url('Lato-Black.svg#Lato-Black') format('svg'),
+		url('Lato-Black.ttf') format('truetype'),
+		url('Lato-Black.woff') format('woff'),
+		url('Lato-Black.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+     font-display: swap;
+}
+@font-face {
+     font-family: 'RobotoCondensed';
+     src: url('RobotoCondensed-Bold.eot');
+     src: url('RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+          url('RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg'),
+          url('RobotoCondensed-Bold.ttf') format('truetype'),
+          url('RobotoCondensed-Bold.woff') format('woff'),
+          url('RobotoCondensed-Bold.woff2') format('woff2');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: 'FiraSans';
+     src: url('FiraSans-Bold.eot');
+     src: url('FiraSans-Bold.eot?#iefix') format('embedded-opentype'),
+          url('FiraSans-Bold.svg#FiraSans-Bold') format('svg'),
+          url('FiraSans-Bold.ttf') format('truetype'),
+          url('FiraSans-Bold.woff') format('woff'),
+          url('FiraSans-Bold.woff2') format('woff2');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+   }
+   @font-face {
+     font-family: 'SFCompactDisplay';
+     src: url('SFCompactDisplay-Regular.eot');
+     src: url('SFCompactDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+          url('SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular') format('svg'),
+          url('SFCompactDisplay-Regular.ttf') format('truetype'),
+          url('SFCompactDisplay-Regular.woff') format('woff'),
+          url('SFCompactDisplay-Regular.woff2') format('woff2');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+
+   
+   
+   
   

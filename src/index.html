@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+  
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="./slick/slick.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
@@ -27,7 +28,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="./js/btnjavascript.js"></script>
 </head>
 
 <body>
@@ -36,10 +37,10 @@
             <div class="banner-header">
                 <div class="container1">
                     <nav class=" d-flex flex-row align-items-center py-3 navbar navbar-expand-lg navbar-light bg-fade">
-                        <a href="" class=" logo_content flex-grow-1 d-flex align-items-center">
+                        <a href="#" class=" logo_content flex-grow-1 d-flex align-items-center">
                             <img src="./assets/logo.png" class="logo-img" alt="logo">
 
-                            <p class="m-0 pl-3" >
+                            <p class="m-0  ml-1" >
                                 Godavari Marathwada Irrigation <br>
                                 Development Corporation
                             </p>
@@ -53,30 +54,50 @@
 
                         <div class="collapse navbar-collapse collaping_nav"
                             id="collapsibleNavbar">
-                            
-                            <ul class="d-flex  navmenu_primary mb-2 navbar-nav">
+
+                            <div class="navmenu_primary navbar-nav">
+                            <ul class="navmenu_primary_list d-flex  navbar-nav">
                                 <li class="nav-item mr-3"><a class="nav-link" href="#">About us</a></li>
                                 <li class="nav-item mr-3"><a class="nav-link" href="#">Tenders</a></li>
-                                <li class="nav-item mr-3"><a class="nav-link" href="#">Knowledge Center</a></li>
-                                <li class="brright a-text nav-item"><button class="a-text_span">A-</button><button
-                                        class="a-text_span">A</button><button class="a-text_span">A+</button></li>
-                                <li class="brright nav-item"> <span class="nav_span_EN">EN</span></li>
-                                <li class="brright nav-item"><i class="fa fa-circle bluedot" aria-hidden="true"></i><i
-                                        class="fa fa-circle greendot" aria-hidden="true"></i><i
-                                        class="fa fa-circle yellowdot" aria-hidden="true"></i></li>
-                                <li class="nav-item d-flex"><button type="button" class="search"><i class="fa fa-search"
-                                            aria-hidden="true"></i></button></li>
+                                <li class="nav-item "><a class="nav-link" href="#">Knowledge Center</a></li>
                             </ul>
-
+                            <ul class="navmenu_primary_list1 d-flex  navbar-nav ">
+                                <li class=" a-text nav-item ">
+                                    <button class="a-text_span">A-</button>
+                                    <button class="a-text_span">A</button>
+                                    <button class="a-text_span">A+</button>
+                                </li>
+                                <li class=" nav-item d-flex align-items-center dropdown"> 
+                                    <a class="nav_span_EN " data-toggle="dropdown">EN</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">MARATHI</a>
+                                        <a class="dropdown-item" href="#">HINDI</a>
+                                        <a class="dropdown-item" href="#">FRENCH</a>
+                                        <a class="dropdown-item" href="#">URDU</a>
+                                      </div>
+                                </li>
+                                <li class=" nav-item d-flex align-items-center ellipse_holder">
+                                    <img src="./assets/Ellipse 2.png" alt="Ellipseimg">
+                                    <img src="./assets/Ellipse 3.png" alt="Ellipseimg" class="ellipseimg">
+                                    <img src="./assets/Ellipse 4.png" alt="Ellipseimg">
+                                </li>
+                                <li class="nav-item d-flex"><button type="button" class="search">
+                                    <!-- <i class="fa fa-search" aria-hidden="true" style="width: 11px; height: 11px;"></i></button> -->
+                                    <!-- <form> <img src="./assets/Union 1.png" class="search_img" alt="search img"></form> -->
+                                    <form onclick="document.getElementById('myInput').value = ''">
+                                        <input id="myInput" type="text" name="search" class="search_img" onfocus="this.value=''" onfocusout="this.value=''">
+                                      </form>
+                                </li>
+                            </ul>
+                        </div>
 
                             <div class="navmenu_secondary navbar-nav">
-                                <ul class=" navmenu_secondary_list">
-                                    <li class="nav-item "><a class="nav-link" href="#">Annual Report</a></li>
-                                    <li class="nav-item "><a class="nav-link" href="#">Circular</a></li>
-                                    <li class="nav-item "><a class="nav-link" href="#">Disclosure</a></li>
-                                    <li class="nav-item "><a class="nav-link" href="#">Governing</a></li>
-                                    <li class="nav-item "><a class="nav-link" href="#">Governing Counsils Decision</a>
-                                    </li>
+                                <ul class=" navmenu_secondary_list ">
+                                    <li class="nav-item "><a  href="#">Annual Report</a></li>
+                                    <li class="nav-item "><a href="#">Circular</a></li>
+                                    <li class="nav-item"><a  href="#">Disclosure</a></li>
+                                    <li class="nav-item "><a  href="#">Governing Councils</a></li>
+                                    <li class="nav-item "><a  href="#">Governing Counsils Decision</a> </li>
 
                                 </ul>
                             </div>
@@ -90,7 +111,7 @@
             </div>
         </header>
         <section class="about_us_sec">
-            <div class="container d-flex justify-content-center align-items-center text-center">
+            <div class="container1 d-flex justify-content-center align-items-center text-center">
                 <div class="about-us-sec_content text-center">
                     <h2 class="watermark-h2">ABOUT US</h2>
                     <h5 class="watermark-bottom-content">ABOUT US</h5>
@@ -102,7 +123,7 @@
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </p>
-                    <button type="button" class="knowmore_btn mt-3">Know More</button>
+                    <button type="button" class="knowmore_btn mt-3" onclick="btn_knowMore()">Know More</button>
                 </div>
             </div>
 
@@ -141,6 +162,10 @@
                                         cusec</h6>
                                     <p class="card-text">On Wednesday, four gates of the Jayakwadi dam, one of the
                                         biggest dams in the state known as the …</p>
+                                        <div class="sliderwrap-button-wrap">
+                                            <button class="btn sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>
+                    
+                                        </div>
 
                                 </div>
                             </div>
@@ -169,6 +194,10 @@
                                     <h6 class="card-subtitle mb-2">Full Krishna, Godavari dams bring cheer</h6>
                                     <p class="card-text">On saturday, three gates of the Jayakwadi dam, one of the
                                         biggest dams in the state known as the …</p>
+                                        <div class="sliderwrap-button-wrap">
+                                            <button class="btn sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>
+                    
+                                        </div>
 
                                 </div>
                             </div>
@@ -197,6 +226,10 @@
                                     <h6 class="card-subtitle mb-2">Full Krishna, Godavari dams bring cheer</h6>
                                     <p class="card-text">On Monday, two gates of the Jayakwadi dam, one of the
                                         biggest dams in the state known as the …</p>
+                                        <div class="sliderwrap-button-wrap">
+                                            <button class="btn sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>
+                    
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -204,13 +237,14 @@
                                 <button class="btn sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>
         
                             </div> -->
+                            
                     </div>
                 </div>
             </div>
         </section>
         <div class="clearfix"></div>
         <section class="service-sec w-100">
-            <div class="container  d-flex justify-content-center align-items-center">
+            <div class="container1  d-flex justify-content-center align-items-center">
                 <div class="service-sec_content text-center ">
                     <h2 class="watermark-h2 ">services</h2>
                     <h5 class="watermark-bottom-content ">services</h5>
@@ -236,11 +270,14 @@
                             <p>Sprinkler <br /> irrigation</p>
                         </li>
                     </ul>
-                    <button type="button" class="knowmore_btn mt-5">Know More</button>
+                    <button type="button" class="knowmore_btn mt-5" onclick="btn_knowmore_servises()">Know More</button>
                 </div>
             </div>
         </section>
-        <section  class="tender-grp-img"></section>
+        <div  class="tender-grp-img">
+            <div class="layer"></div>
+        </div>
+        
         <section class="tenders-sec">
             <div class="container1 ">
                 <h2 class="watermark-h2  text-center">Tenders</h2>
@@ -250,7 +287,7 @@
                         <div class="col-sm-6 shadow">
                             <div class="tender-detail_card col-md-12 d-flex p-lg-0 justify-content-between ">
                                 <div class=" tender-content">
-                                    <h4>Tender1</h4>
+                                    <h4>Tender 1</h4>
                                     <p>Tender For Construction Of Part L And Lll L.D. Works In Chak Ol-10, Ol-11, Ol-12,
                                         Ol-13, Ol-14 Tail Right Distributor No.2/Karkheli Branch Canal/ Irbc/ Upp
                                     </p>
@@ -263,7 +300,7 @@
                         <div class="col-sm-6">
                             <div class="tender-detail_card col-md-12 d-flex  p-lg-0 justify-content-between">
                                 <div class="tender-content">
-                                    <h4>Tender2</h4>
+                                    <h4>Tender 2</h4>
                                     <p>Tender For Construction Of Part I And Iii Ld Works In Chak Or-8, R-Tail, Sm-Tail
                                         On Rm-1/ Right Distributory No.1/Karkheli Branch Canal/ Irbc/ Upp
                                     </p>
@@ -278,7 +315,7 @@
                         <div class="col-sm-6">
                             <div class="tender-detail_card col-md-12 d-flex  p-lg-0 justify-content-between ">
                                 <div class="tender-content">
-                                    <h4>Tender3</h4>
+                                    <h4>Tender 3</h4>
                                     <p>Tender For Construction Of Part I And Iii Ld Works In Chak Ol 3, Ol-4, Ol 5, Ol 6
                                         And Or-5 On Tail Minor On Pangari Dy. Of/Irbc/ Upp
                                     </p>
@@ -291,7 +328,7 @@
                         <div class="col-sm-6">
                             <div class="tender-detail_card col-md-12 d-flex  p-lg-0 justify-content-between">
                                 <div class="tender-content">
-                                    <h4>Tender4</h4>
+                                    <h4>Tender 4</h4>
                                     <p>Tender For Excruciating Construction And Remaining Work
                                     </p>
                                 </div>
@@ -302,7 +339,7 @@
                         </div>
                     </div>
                     <div class=" view-all-btn-holder d-flex justify-content-center align-items-center ">
-                        <button type="button" class="knowmore_btn ">View All</button>
+                        <button type="button" class="knowmore_btn " onclick="btn_viewall()">View All</button>
                     </div>
                 </div>
 
@@ -311,7 +348,7 @@
 
         </section>
         <footer class="footer_container">
-            <div class="container1 pr-0 mr-0">
+            <div class="container1">
                 <div class="footer_container_inner d-flex">
                     <div class="subscribe_section d-flex flex-column ">
 
@@ -319,7 +356,7 @@
                         <div class="subscribe_section_email_holder d-flex justify-content-between align-items-center">
                             <input type="text" class="subscribe_section_email" placeholder="Enter Email Id">
 
-                            <button class="btn_subscribe_now">Subscribe now</button>
+                            <button class="btn_subscribe_now" onclick="btn_subscribe()">Subscribe now</button>
                         </div>
                         <div class="about_us_holder d-flex justify-content-between">
                             <div class="about_us_innear">
@@ -353,9 +390,9 @@
                         <div class=" text_declaration_holder d-flex justify-content-between align-items-center">
 
                             <h6 class="text_declaration">This is the official website of Vidarbha Irrigation Development
-                                Corporation<br>© Copyright 2019. All rights reserved</h6>
+                                Corporation<br><span>© Copyright 2019. All rights reserved</span></h6>
 
-                            <h6 class="text_declaration pr-lg-5 float-right">Powered by<br>Webwerks Pvt Ltd</h6>
+                            <h6 class="text_declaration float-right">Powered by<br><span>Webwerks Pvt Ltd</span></h6>
 
                         </div>
                     </div>
@@ -420,10 +457,10 @@
                 infinite: true,
                 variableWidth: true,
                 autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
+                autoplaySpeed: 1000,
+                arrows: false,
                 slidesToShow: 1,
-                nextArrow: '<button class="sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>',
+                //nextArrow: '<button class="sliderwrap-button-leftbtn " type="button"> <i class="zmdi zmdi-long-arrow-right"></i></button>',
                 responsive: [
                     {
                         breakpoint: 768,
@@ -445,9 +482,9 @@
             });
 
         });
+      
        
     </script>
-
 </body>
 
 </html>

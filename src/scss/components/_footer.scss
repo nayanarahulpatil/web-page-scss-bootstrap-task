@@ -1,18 +1,36 @@
 /*FOOTER START*/
 .footer_container{
   margin-top: 5rem;
-  background-color: $yellow;
+   background-color: $yellow;
+  position:relative;
+  overflow:hidden;
+  // background: $yellow ,rgba(0, 0, 0, 0.1);
+  //background: linear-gradient(90deg, $yellow  100%, rgba(0, 0, 0, 0.1) 50%);
  }
+ 
+  .footer_container:after{
+  width:35%;
+  position:absolute;
+  right:0;
+  top:0;
+  content:"";
+  display:block;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.1);
+  z-index:1;
+  }
+
  .footer_container_inner{
   padding: 0rem;
 }
 .subscribe_section{
  margin-top: 6.4rem;
- flex-grow: 1;
+flex: 65%;
 h4{
   color: $text-color;
-  font-weight:600;
+  font-weight:700;
   font-size:$font-22px;
+  font-family: $font-family_lato-regular;
 }
  }
      .subscribe_section_email_holder{
@@ -22,13 +40,13 @@ h4{
         @include borderradius(8rem);
         padding: 0.5rem;
         margin-top: 1.6rem;
-        margin-right: 7.5rem;
      
       }
       .subscribe_section_email{
         color: $text-color;
         font-weight:400;
         font-size:$font-14px;
+        font-family: $font-family_lato-regular;
         padding-left: 1.9rem;
         background: none;
         border: 0;
@@ -37,25 +55,35 @@ h4{
        }
        ::placeholder {
         color: $text-color;
+        font-family: $font-family_lato-regular;
+        font-weight:400;
+        font-size:$font-14px;
         opacity: 1; /* Firefox */
       }
       
       :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: $text-color;
+        font-weight:400;
+        font-size:$font-14px;
+        font-family: $font-family_lato-regular;
       }
       
       ::-ms-input-placeholder { /* Microsoft Edge */
         color: $text-color;
+        font-weight:400;
+        font-size:$font-14px;
+        font-family: $font-family_lato-regular;
       }
       .btn_subscribe_now{
         @include borderradius(8rem);
         min-width: 19.1rem;
         color: $text-color;
-        font-weight:600;
+        font-weight:700;
         font-size:$font-16px; 
         height: 3.6rem;
         border: none;
         padding: 0.2rem;
+        font-family: $font-family_SFCompactDisplay-Regular;
         transition:  all .5s ease-in-out;
         -webkit-transition: all .5s ease-in-out;
           -moz-transition: all .5s ease-in-out; 
@@ -70,6 +98,7 @@ h4{
         cursor: pointer;
         border: none;
         color: #FFFFFF;
+        font-family: $font-family_SFCompactDisplay-Regular;
         background-color:$yellow;;
         padding: 0.5rem;
         transition:  all .5s ease-in-out;
@@ -93,15 +122,15 @@ h4{
         h5{
             color: $text-color;
             font-size:$font-18px;
-            font-family: $font-family;
-            font-weight: 600;
+            font-family: $font-family_SFCompactDisplay-Regular;
+            font-weight: 700;
             letter-spacing: .3px;
             margin-top: 2.2rem;
         }
         a{
             color: $text-color;
             font-size:$font-14px;
-            font-family: $font-family;
+            font-family: $font-family_SFCompactDisplay-Regular;
             font-weight: 400;
             letter-spacing: .3px;
             transition:  all .5s ease-in-out;
@@ -128,15 +157,22 @@ h4{
         h6{
             color: $text-color;
             font-size:$font-12px;
-            font-family: $font-family;
+            font-family:$font-family_lato-regular;
+            font-weight: 700;
+            span{
+              color: $text-color;
+            font-size:$font-12px;
+            font-family:$font-family_lato-regular;
             font-weight: 400;
-
+            }
         }
     }
-    .contact_us_section{
-      background: rgba(0, 0, 0, 0.1) none;
-      width: 45.6rem;
-    }
+  .contact_us_section{
+    float: right;
+    flex: 35%;
+    width: 100%;
+    padding-left: 3.6rem;
+  }
     .conacct_section_inner{
       width: 37.1rem;
 
@@ -147,8 +183,8 @@ h4{
       h6{
           color: $text-color;
           font-size:$font-18px;
-          font-family: $font-family;
-          font-weight: 600;
+          font-family: $font-family_lato-regular;
+          font-weight: 700;
           letter-spacing: .3px;
           line-height: 2.4rem;
       }
@@ -156,7 +192,7 @@ h4{
         color: $text-color;
         font-size:$font-14px;
         line-height: 1.8rem;
-        font-family: $font-family;
+        font-family: $font-family_lato-regular;
         font-weight: 400;
         opacity: 0.8;
       }
@@ -180,6 +216,7 @@ h4{
   .Follow_us_container{
    margin-bottom: 3.2rem;
    padding-right: 3rem;
+ 
   }
    .Follow_us_header_container{
     border-right: 1px solid rgba(#FFFFFF, .3);
@@ -203,10 +240,10 @@ h4{
   /*Responsive for mobile and tab*/
   @include respond-to('desktop-max') {
     html{
-      font-size:9px;
+      font-size:8px;
     }
     .container1{
-      max-width:140rem;
+      max-width:100%;
       margin-left: auto;
       margin-right: auto;
       padding-left: 0;
@@ -252,6 +289,22 @@ h4{
       padding-right: 0;
   
   }
+  .footer_container{
+    margin-top: 5rem;
+     background-color: $yellow;
+    overflow:hidden;
+   }
+   .footer_container:after{
+    width:0%;
+    position:absolute;
+    right:0;
+    top:0;
+    content:"";
+    display:block;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.1);
+    z-index:1;
+    }
     .footer_container_inner{
       flex-direction: column;
       padding: 2rem;
@@ -259,6 +312,7 @@ h4{
     .contact_us_section{
       width: 100%;
       padding: 5rem;
+      background-color:rgba(0, 0, 0, 0.1);
     }
  .subscribe_section{
    align-items: center;
